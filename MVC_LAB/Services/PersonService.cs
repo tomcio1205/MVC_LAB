@@ -10,6 +10,19 @@ namespace MVC_LAB.Services
         {
             _context = context;
         }
+
+        public void CreatePerson(int id, string name, string city, GenderEnum gender)
+        {
+            _context.Persons.Add(new PersonModel()
+            {
+                ID = id,
+                Name = name,
+                City = city,
+                Gender = gender
+            });
+            _context.SaveChanges();
+        }
+
         public List<PersonModel> GetPersons()
         {
             return _context.Persons.ToList();

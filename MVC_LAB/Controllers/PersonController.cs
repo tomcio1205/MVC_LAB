@@ -22,5 +22,16 @@ namespace MVC_LAB.Controllers
             };
             return View(model);
         }
+
+        public IActionResult NewPerson()
+        {
+            return View();
+        }
+
+        public IActionResult CreateNewPerson(int id, string name, string city, GenderEnum gender)
+        {
+            _personService.CreatePerson(id, name, city, gender);
+            return RedirectToAction("Index");
+        }
     }
 }

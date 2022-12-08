@@ -283,6 +283,18 @@
           "build/net6.0/Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite.targets": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.Tools/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0/_._": {}
+        }
+      },
       "Microsoft.Extensions.Caching.Abstractions/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -1674,6 +1686,31 @@
         "lib/net6.0/Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite.xml",
         "microsoft.entityframeworkcore.sqlserver.nettopologysuite.7.0.0.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlserver.nettopologysuite.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Tools/7.0.0": {
+      "sha512": "DtLJ0usm8NdPbRDxvNUBAYgnvqhodr/HPb461I+jrgHw5ZKF0vRTaokNth2Zy9xiw1ZTpT4c+S40f7AHWakODg==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.tools/7.0.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/_._",
+        "microsoft.entityframeworkcore.tools.7.0.0.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.nuspec",
+        "tools/EntityFrameworkCore.PS2.psd1",
+        "tools/EntityFrameworkCore.PS2.psm1",
+        "tools/EntityFrameworkCore.psd1",
+        "tools/EntityFrameworkCore.psm1",
+        "tools/about_EntityFrameworkCore.help.txt",
+        "tools/init.ps1",
+        "tools/net461/any/ef.exe",
+        "tools/net461/win-arm64/ef.exe",
+        "tools/net461/win-x86/ef.exe",
+        "tools/netcoreapp2.0/any/ef.dll",
+        "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/7.0.0": {
@@ -4045,38 +4082,36 @@
       "Microsoft.EntityFrameworkCore >= 7.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite >= 7.0.0",
-      "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.0"
+      "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.0",
+      "Microsoft.EntityFrameworkCore.Tools >= 7.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Tomek\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\trajzer\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tomek\\Documents\\Repositories\\MVC_LAB\\MVC_LAB\\MVC_LAB.csproj",
+      "projectUniqueName": "C:\\Users\\trajzer\\Documents\\Repositories\\MVC_LAB\\MVC_LAB\\MVC_LAB.csproj",
       "projectName": "MVC_LAB",
-      "projectPath": "C:\\Users\\Tomek\\Documents\\Repositories\\MVC_LAB\\MVC_LAB\\MVC_LAB.csproj",
-      "packagesPath": "C:\\Users\\Tomek\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tomek\\Documents\\Repositories\\MVC_LAB\\MVC_LAB\\obj\\",
+      "projectPath": "C:\\Users\\trajzer\\Documents\\Repositories\\MVC_LAB\\MVC_LAB\\MVC_LAB.csproj",
+      "packagesPath": "C:\\Users\\trajzer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\trajzer\\Documents\\Repositories\\MVC_LAB\\MVC_LAB\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Tomek\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\trajzer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {},
-        "https://gitlab.dotconnect.vc/api/v4/projects/297/packages/nuget/index.json": {},
         "https://www.myget.org/F/drutol/api/v3/index.json": {}
       },
       "frameworks": {
@@ -4116,6 +4151,12 @@
           "Microsoft.EntityFrameworkCore.Sqlite": {
             "target": "Package",
             "version": "[7.0.0, )"
+          },
+          "Microsoft.EntityFrameworkCore.Tools": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[7.0.0, )"
           }
         },
         "imports": [
@@ -4136,7 +4177,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.111\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
